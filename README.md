@@ -1,10 +1,12 @@
 # Happy Meal
 
-Happy Meals are containers for Mac.
-
+Happy Meals are containers for Mac. This way you can run x86_64 images on ARM architecture (M1,M2,M3, etc)
+ 
 ## Why
 
-Commercial use of [Docker Desktop](https://www.docker.com/products/docker-desktop/) at a company of more than 250 employees OR more than $10 million in annual revenue requires a paid subscription (Pro, Team, or Business).
+When Apple switched architecture, that made it impossible to run x86(64) images on their CPUs. ARM and x86(64) have a way different architecture, making computational instructions in a different way. (this is overly simplified, but 'different' is sufficient for now) I use some images which are not built for ARM, thus was not able to run those on my fancy new 'Starbucks Late Frappucino Blogging Machine'.
+
+You can use Docker Desktop, but commercial use of [Docker Desktop](https://www.docker.com/products/docker-desktop/) at a company of more than 250 employees OR more than $10 million in annual revenue requires a paid subscription (Pro, Team, or Business).
 **Source:** [Docker.com, pricing and subscriptions](https://www.docker.com/pricing/)
 
 ## Thus
@@ -14,11 +16,11 @@ This recipe allows a (worse) alternative to Docker Desktop, but the components a
 
 ## Create docker server
 
-Because we are sophisticated people, we use brew to install Vagrant and QEMU.
+Because we are sophisticated people, and not savages, we use brew to install Vagrant and QEMU.
 
 ```brew install vagrant qemu```
 
-Because we live in a society, we will use a plugin to control QEMU.
+Because we live in a society, and not in the wilderness, we will use a plugin to control QEMU.
 
 ```vagrant plugin install vagrant-qemu```
 
